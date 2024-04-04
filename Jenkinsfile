@@ -6,8 +6,11 @@ pipeline{
         stage('git checkout'){
             steps{
                 git branch: 'main', credentialsId: 'github_id', url: 'https://github.com/Girija-Sugumar/jenkinpro.git'
-                sh 'cd /var/lib/jenkins/workspace/sharedlib && npm install'
+                
             }
+        }
+        tools {
+          nodejs 'nodejs'
         }
         stage('npm package'){
             steps{
