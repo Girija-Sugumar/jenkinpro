@@ -9,9 +9,6 @@ pipeline{
                 
             }
         }
-        tools {
-          nodejs 'nodejs'
-        }
         stage('npm package'){
             steps{
                 npm()
