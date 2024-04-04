@@ -6,6 +6,7 @@ pipeline{
         stage('git checkout'){
             steps{
                 git branch: 'main', credentialsId: 'github_id', url: 'https://github.com/Girija-Sugumar/jenkinpro.git'
+                sh 'npm install'
             }
         }
         stage('npm package'){
